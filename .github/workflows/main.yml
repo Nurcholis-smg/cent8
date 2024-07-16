@@ -17,9 +17,6 @@ jobs:
         uses: roles-ansible/check-ansible-centos-centos8-action@master
         with:
           targets: "./"          
-      - name: Get IP Addresses      
-              uses: candidob/get-runner-ip@v1.0.0
-      - name: See IP Addresses
         run: |
             echo ${{ steps.ip.outputs.ipv4 }}
             echo ${{ steps.ip.outputs.ipv6 }}
