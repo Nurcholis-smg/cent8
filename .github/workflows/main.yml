@@ -16,7 +16,12 @@ jobs:
         # optionally replace "master" with any valid git ref
         uses: roles-ansible/check-ansible-centos-centos8-action@master
         with:
-          targets: "./"   
+          targets: "./"  
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.key_cent8 }}
+          port: ${{ secrets.PORT }}
+          script: whoami
           #  [required]
           #   Paths to your ansible role or playboox.yml you want to test
           #   Some Examples:
